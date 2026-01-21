@@ -271,20 +271,18 @@ frontend:
 metadata:
   created_by: "main_agent"
   version: "1.0"
-  test_sequence: 1
+  test_sequence: 2
   run_ui: false
 
 test_plan:
   current_focus:
-    - "User Authentication (Register/Login)"
-    - "Post Creation and Management"
-    - "Feed Endpoint"
-    - "Like/Unlike Posts"
-    - "Comments on Posts"
-    - "Follow/Unfollow Users"
-    - "User Search"
+    - "Authentication Screens (Login/Register)"
+    - "Feed Screen with Posts"
+    - "Create Post Screen with Camera/Gallery"
+    - "Profile Screen"
+    - "Tab Navigation"
   stuck_tasks: []
-  test_all: true
+  test_all: false
   test_priority: "high_first"
 
 agent_communication:
