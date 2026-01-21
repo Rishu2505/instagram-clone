@@ -179,27 +179,33 @@ backend:
   
   - task: "Follow/Unfollow Users"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented POST/DELETE /api/users/{id}/follow for following/unfollowing. Not yet tested."
+      - working: true
+        agent: "testing"
+        comment: "Comprehensive testing completed. Follow/unfollow functionality working correctly. Tested: follow user, verify following status, unfollow user, verify unfollowing status, prevent duplicate follows, prevent self-follow. All authorization checks working properly."
   
   - task: "User Search"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented GET /api/users/search/{query} for searching users. Not yet tested."
+      - working: true
+        agent: "testing"
+        comment: "Comprehensive testing completed. User search functionality working correctly. Tested: search by username (partial match), search by full name (partial match), case-insensitive search, proper result format with user details. Returns appropriate user lists excluding current user."
 
 frontend:
   - task: "Authentication Screens (Login/Register)"
